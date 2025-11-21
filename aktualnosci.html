@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aktualności – ATLAS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">ATLAS</a>
+      <button class="nav-toggle" aria-label="Otwórz menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="index.html">Start</a></li>
+          <li><a href="aktualnosci.html">Aktualności</a></li>
+          <li><a href="plan-spotkan.html">Plan spotkań</a></li>
+          <li><a href="osiagniecia.html">Osiągnięcia</a></li>
+          <li><a href="polityka.html">Polityka/Regulamin</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1>Aktualności</h1>
+      <p class="meta">Poniżej znajdują się placeholdery – treść zostanie uzupełniona ręcznie.</p>
+
+      <div class="card" id="jokes-card" style="margin-top:16px;">
+        <h2>Humor przed spotkaniem</h2>
+        <p class="meta">Jeden losowy żart z zewnętrznego API. Kliknij, aby odświeżyć.</p>
+        <div id="jokes" class="items"></div>
+        <div style="margin-top:10px;">
+          <button class="btn btn-ghost" id="refresh-jokes" type="button">Odśwież żarty</button>
+        </div>
+      </div>
+
+      <div class="items" style="margin-top:14px;">
+        <article class="item">
+          <div class="meta">2025-01-15</div>
+          <h3>Aktualność 1</h3>
+          <p>Krótki opis aktualności 1 (placeholder).</p>
+        </article>
+        <article class="item">
+          <div class="meta">2025-01-10</div>
+          <h3>Aktualność 2</h3>
+          <p>Krótki opis aktualności 2 (placeholder).</p>
+        </article>
+        <article class="item">
+          <div class="meta">2025-01-05</div>
+          <h3>Aktualność 3</h3>
+          <p>Krótki opis aktualności 3 (placeholder).</p>
+        </article>
+        <article class="item">
+          <div class="meta">2024-12-20</div>
+          <h3>Aktualność 4</h3>
+          <p>Krótki opis aktualności 4 (placeholder).</p>
+        </article>
+        <article class="item">
+          <div class="meta">2024-12-10</div>
+          <h3>Aktualność 5</h3>
+          <p>Krótki opis aktualności 5 (placeholder).</p>
+        </article>
+        <article class="item">
+          <div class="meta">2024-12-01</div>
+          <h3>Aktualność 6</h3>
+          <p>Krótki opis aktualności 6 (placeholder).</p>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> ATLAS</p>
+      <nav class="footer-nav">
+        <a href="polityka.html">Polityka prywatności</a>
+        <a href="polityka.html#regulamin">Regulamin</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+

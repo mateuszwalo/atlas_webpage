@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kontakt – ATLAS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">ATLAS</a>
+      <button class="nav-toggle" aria-label="Otwórz menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="index.html">Start</a></li>
+          <li><a href="aktualnosci.html">Aktualności</a></li>
+          <li><a href="plan-spotkan.html">Plan spotkań</a></li>
+          <li><a href="osiagniecia.html">Osiągnięcia</a></li>
+          <li><a href="polityka.html">Polityka/Regulamin</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1>Kontakt</h1>
+      <div class="grid two">
+        <div class="card">
+          <h3>Napisz do nas</h3>
+          <form id="contact-form" novalidate>
+            <div class="row">
+              <div>
+                <label for="name">Imię i nazwisko</label>
+                <input id="name" name="name" type="text" placeholder="Jan Kowalski" required>
+              </div>
+              <div>
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="email" placeholder="jan.kowalski@example.com" required>
+              </div>
+            </div>
+            <div>
+              <label for="message">Wiadomość</label>
+              <textarea id="message" name="message" placeholder="Twoja wiadomość..." required></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Wyślij</button>
+          </form>
+          <p class="meta" style="margin-top:10px;">Na obecnym etapie formularz jest przykładowy (bez backendu). Skontaktuj się również mailowo.</p>
+        </div>
+        <div class="card">
+          <h3>Dane kontaktowe</h3>
+          <p>E-mail: <a href="mailto:atlas-kolo@example.com">atlas-kolo@example.com</a></p>
+          <p>Media społecznościowe: placeholder</p>
+          <p>Adres uczelni: placeholder</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> ATLAS</p>
+      <nav class="footer-nav">
+        <a href="polityka.html">Polityka prywatności</a>
+        <a href="polityka.html#regulamin">Regulamin</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Prosty handler bez backendu
+    (function () {
+      var form = document.getElementById('contact-form');
+      if (!form) return;
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        alert('Dziękujemy! Wiadomość (placeholder) została przygotowana do wysłania.');
+        form.reset();
+      });
+    })();
+  </script>
+</body>
+</html>
+
+
