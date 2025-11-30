@@ -41,23 +41,55 @@
     // Current month examples:
   };
 
-  // Add sample placeholders for the first three Wednesdays of current month
-  (function seedPlaceholders() {
-    var d = new Date(year, month, 1);
-    var weds = 0;
-    while (d.getMonth() === month && weds < 3) {
-      if (d.getDay() === 3) { // Wednesday
-        var iso = d.toISOString().slice(0, 10);
+  var eventsByDate = {
+    // Możesz dodać tu inne konkretne daty ręcznie jeśli trzeba
+    '2025-12-02': {
+      title: 'Spotkanie wieczorne',
+      time: '19:30',
+      desc: 'Spotkanie sekcji marketingowej'
+    }
+  };
+
+  (function seedBiweeklySaturdays() {
+    var start = new Date(year, month, 1);
+    // znajdź pierwszą sobotę (getDay() === 6)
+    while (start.getDay() !== 6) {
+      start.setDate(start.getDate() + 1);
+    }
+    // koniec zakresu: ostatni dzień miesiąca + 2 miesiące
+    var end = new Date(year, month + 3, 0);
+    var d = new Date(start.getTime());
+    while (d <= end) {
+      var iso = d.toISOString().slice(0, 10);
+      // jeśli nie nadpisywać istniejących wpisów (np. ręcznie dodanych), zostaw je
+      if (!eventsByDate[iso]) {
         eventsByDate[iso] = {
-          title: 'Spotkanie koła (placeholder)',
-          time: '18:00',
-          desc: 'Plan: omówienie działań koła i tematy projektów.'
+          title: 'Spotkanie koła',
+          time: '10:00',
+          desc: 'Plan spotkania: omówienie bieżących spraw, praca nad projektami'
         };
-        weds++;
       }
-      d.setDate(d.getDate() + 1);
+      // przesuwamy o 14 dni
+      d.setDate(d.getDate() + 14);
     }
   })();
+  // Add sample placeholders for the first three Wednesdays of current month
+  // (function seedPlaceholders() {
+  //   var d = new Date(year, month, 1);
+  //   var weds = 0;
+  //   while (d.getMonth() === month && weds < 3) {
+  //     if (d.getDay() === 3) { // Wednesday
+  //       var iso = d.toISOString().slice(0, 10);
+  //       eventsByDate[iso] = {
+  //         title: 'Spotkanie koła',
+  //         time: '10:00',
+  //         desc: 'Plan: omówienie działań koła i tematów projektów'
+  //       };
+  //       weds++;
+  //     }
+  //     d.setDate(d.getDate() + 1);
+  //   }
+  // })();
 
   var monthNames = ['Styczeń','Luty','Marzec','Kwiecień','Maj','Czerwiec','Lipiec','Sierpień','Wrzesień','Październik','Listopad','Grudzień'];
   var dayNames = ['Pn','Wt','Śr','Cz','Pt','So','Nd']; // Monday-first
