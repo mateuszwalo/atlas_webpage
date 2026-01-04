@@ -4,14 +4,25 @@
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 })();
 
-// Mobile nav
+// Mobile nav (NAPRAWIONE)
 (function mobileNav() {
   var header = document.querySelector('.site-header');
   var btn = document.querySelector('.nav-toggle');
-  if (!header || !btn) return;
-  btn.addEventListener('click', function () {
-    var open = header.classList.toggle('open');
-    btn.setAttribute('aria-expanded', String(open));
+  
+  if (!header || !btn) {
+    console.error('Błąd: Nie znaleziono nagłówka lub przycisku menu!');
+    return;
+  }
+
+  // Usuwamy stare listenery (dla pewności, choć w czystym JS to niekonieczne przy odświeżaniu)
+  var newBtn = btn.cloneNode(true);
+  btn.parentNode.replaceChild(newBtn, btn);
+  
+  newBtn.addEventListener('click', function (e) {
+    e.preventDefault(); // Zapobiega dziwnym skokom strony
+    var isOpen = header.classList.toggle('open');
+    console.log('Kliknięto menu! Czy otwarte?', isOpen); // To pozwoli sprawdzić czy działa
+    newBtn.setAttribute('aria-expanded', String(isOpen));
   });
 })();
 

@@ -4,13 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Zarząd – ATLAS</title>
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Rakkas&family=Tac+One&display=swap" rel="stylesheet"> -->
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html">ATLAS</a>
+      <a class="brand" href="index.html">
+        <img src="assets/images/ATLAS_logo_białe.png" alt="Logo ATLAS">
+      </a>
       <button class="nav-toggle" aria-label="Otwórz menu" aria-expanded="false"><span></span><span></span><span></span></button>
       <nav class="site-nav">
         <ul>
@@ -37,39 +43,50 @@
 
     <section class="member-row" aria-labelledby="opiekun-name">
         <img src="assets\images\opiekun.jpg" alt="Opiekun koła — Magdalena Piłat-Rożek">
-        <div>
+        <div class="member-header">
           <h2 id="opiekun-name" class="member-name">mgr inż. Magdalena Piłat-Rożek</h2>
           <div class = "member-role">Najlepsza Opiekunka najlepszego Koła</div>
+        </div>
+
+        <div>
           <p class="member-bio">Wyjątkowa mentorka i Opiekunka — dzięki jej zaangażowaniu Członkowie Koła zdobywają praktyczne umiejętności, realizują ambitne projekty, odnoszą pierwsze sukcesy akademickie oraz mogą zawsze polegać na profesjonalnej pomocy i niezawodnym wsparciu naukowym.</p>
         </div>
       </section>
 
       <section class="member-row reverse" aria-labelledby="prezes-name">
+        <img src="assets\images\prezes.jpg" alt="Prezes — Karolina Gajowiak">
         <div>
           <h2 id="prezes-name" class="member-name">Karolina Gajowiak</h2>
           <div class = "member-role">Prezes Koła</div>
+        </div>
+
+        <div>
           <p class="member-bio">Mega ogarniacz z wybitną umiejętnością tworzenia najpotężniejszych exceli. Koordynuje prace zarządu, organizację wydarzeń, współpracę z partnerami. Czuwa nad wszystkim, o czym można pomyśleć — i nad kilkoma rzeczami, o których nikt jeszcze nie zdążył pomyśleć.</p>
         </div>
-        <img src="assets\images\prezes.jpg" alt="Prezes — Karolina Gajowiak">
       </section>
 
-      <!-- Sekretarz (zdjęcie po lewej, tekst po prawej) -->
-      <section class="member-row" aria-labelledby="sekretarz-name">
+      <section class="member-row" aria-labelledby="wiceprezes-name">
         <img src="assets\images\wice_prezes.jpg" alt="Wiceprzewodniczący — Mateusz Walo">
-        <div>
+        <div class="member-header">
           <h2 id="wiceprezes-name" class="member-name">Mateusz Walo</h2>
-          <div class = "member-role">Wiceprzewodniczący</div>
-          <p class="member-bio">Słynie z profesjonalizmu, mądrych decyzji oraz charyzmy, która potrafi przekonać nawet najbardziej oporną rzeczywistość. To ten typ osoby, do której wszyscy zwracają się z pytaniem: „jak to najlepiej zrobić?” — zwłaszcza że w jego słowniku nie istnieje pojęcie ograniczeń.</p>
+          <div class = "member-role">Wice&shy;przewodniczący</div>
+        </div>
+
+        <div>
+          <p class="member-bio">Słynie z profesjonalizmu, mądrych decyzji oraz charyzmy, która potrafi przekonać nawet najbardziej oporną rzeczywistość. To ten typ osoby, do której wszyscy zwracają się z pytaniem: „jak to najlepiej zrobić?” - zwłaszcza, że w jego słowniku nie istnieje pojęcie ograniczeń.</p>
         </div>
       </section>
 
       <section class="member-row reverse" aria-labelledby="skarbnik-name">
+        <img src="assets\images\sekretarz.jpg" alt="Sekretarz — Weronika Poniedziałek">
         <div>
           <h2 id="sekretarz-name" class="member-name">Weronika Poniedziałek</h2>
           <div class = "member-role">Sekretarz</div>
+        </div>
+
+        <div>
           <p class="member-bio">Łączy końcówkę studiów z pracą zawodową, trzyma pieczę nad informacjami, dokumentami i mediami społecznościowymi. To dzięki niej wiadomości są wysłane, relacje opublikowane, a chaos informacyjny ujarzmiony.</p>
         </div>
-        <img src="assets\images\sekretarz.jpg" alt="Sekretarz — Weronika Poniedziałek">
       </section>
 
       <!-- Członek zarządu (zdjęcie po lewej, tekst po prawej) -->
@@ -78,6 +95,9 @@
         <div>
           <h2 id="czlonek-name" class="member-name">Diana Morzhak</h2>
           <div class = "member-role">Skarbnik</div>
+        </div>
+
+        <div>
           <p class="member-bio">????</p>
         </div>
       </section>

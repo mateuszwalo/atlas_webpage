@@ -4,21 +4,31 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Osiągnięcia – ATLAS</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Rakkas&family=Tac+One&display=swap" rel="stylesheet"> -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+  
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html">ATLAS</a>
-      <button class="nav-toggle" aria-label="Otwórz menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <a class="brand" href="index.html">
+        <img src="assets/images/ATLAS_logo_białe.png" alt="Logo ATLAS">
+      </a>
+      <button class="nav-toggle" aria-label="Otwórz menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
       <nav class="site-nav">
         <ul>
           <li><a href="index.html">Start</a></li>
           <li><a href="aktualnosci.html">Aktualności</a></li>
           <li><a href="plan-spotkan.html">Plan spotkań</a></li>
-          <li><a href="osiagniecia.html">Osiągnięcia</a></li>
-          <li><a href="zarzad.html">Zarząd</a></li>
+          <li><a href="osiagniecia.html" class="is-active">Osiągnięcia</a></li> <li><a href="zarzad.html">Zarząd</a></li>
           <li><a href="polityka.html">Polityka/Regulamin</a></li>
           <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
@@ -29,10 +39,9 @@
   <main class="section">
     <div class="container">
       <h1>Osiągnięcia</h1>
-      <p class="meta">Sprawdź jak fajni jesteśmy😎</p>
+      <p class="meta">Sprawdź jak fajni jesteśmy 😎</p>
 
-      <div class="items" style="margin-top:14px;">
-        <article class="item">
+      <div class="items" style="margin-top: 24px;"> <article class="item">
           <div class="meta">2025</div>
           <h3>Konkurs na wyróżniające się koła Politechniki Lubelskiej</h3>
           <p>ATLAS jako jedno z dwóch najlepszych kół wyróżnionych dzięki swojej działalności przez rektora POLLUB</p>
@@ -40,11 +49,11 @@
         <article class="item">
           <div class="meta">2024</div>
           <h3>Hackology</h3>
-          <p>Zorganizowanie super hackatonu z uczestnikami z całej Polski (doszły nas słuchy, że wpłynęło na ścieżki kariery kilku osób🤫)</p>
+          <p>Zorganizowanie super hackatonu z uczestnikami z całej Polski (doszły nas słuchy, że wpłynęło na ścieżki kariery kilku osób 🤫)</p>
         </article>
         <article class="item">
           <div class="meta">2024</div>
-          <h3> BEST Hacking League</h3>
+          <h3>BEST Hacking League</h3>
           <p>Zajęliśmy drugie miejsce w kategorii sztucznej inteligencji, yo</p>
         </article>
       </div>
@@ -53,7 +62,7 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© <span id="year"></span> ATLAS</p>
+      <p>© <span id="year"></span> ATLAS – Koło Naukowe Uczenia Maszynowego</p>
       <nav class="footer-nav">
         <a href="polityka.html">Polityka prywatności</a>
         <a href="polityka.html#regulamin">Regulamin</a>
@@ -63,5 +72,5 @@
   </footer>
 
   <script src="assets/js/main.js"></script>
-  </body>
-  </html>
+</body>
+</html>

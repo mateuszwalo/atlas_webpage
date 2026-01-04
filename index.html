@@ -4,16 +4,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ATLAS – Koło Naukowe Uczenia Maszynowego</title>
-  <meta name="description" content="Strona Koła Naukowego Uczenia Maszynowego ATLAS. Aktualności, plan spotkań, osiągnięcia, regulaminy i kontakt.">
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Rakkas&family=Tac+One&display=swap" rel="stylesheet"> -->
+
+  <meta name="description" content="Strona Koła Naukowego Uczenia Maszynowego ATLAS.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
+<body class="home-page">
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html">ATLAS</a>
+      <a class="brand" href="index.html">
+        <img src="assets/images/ATLAS_logo_białe.png" alt="Logo ATLAS">
+      </a>
       <button class="nav-toggle" aria-label="Otwórz menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -32,49 +38,79 @@
   </header>
 
   <main>
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-text">
-          <h1>Koło Naukowe Uczenia Maszynowego ATLAS</h1>
-          <p>Eksplorujemy uczenie maszynowe i dane. Dołącz do nas, rozwijaj projekty i umiejętności!</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="aktualnosci.html">Zobacz aktualności</a>
-            <a class="btn btn-ghost" href="plan-spotkan.html">Plan spotkań</a>
+    <section class="hero-top">
+      <div class="container">
+        <div class="hero-wrapper">
+          <div class="hero-logo-container">
+            <div class="glow-effect"></div> 
+            <img src="assets/images/ATLAS_logo_białe.png" alt="Logo ATLAS" class="hero-main-logo">
           </div>
-        </div>
-        <div class="hero-card">
-          <div class="stats">
-            <div class="stat">
-              <div class="stat-num">#ML</div>
-              <div class="stat-label">Uczenie maszynowe</div>
-            </div>
-            <div class="stat">
-              <div class="stat-num">#AI</div>
-              <div class="stat-label">Szcztuczna inteligencja</div>
-            </div>
-            <div class="stat">
-              <div class="stat-num">#Data</div>
-              <div class="stat-label">Analiza danych</div>
-            </div>
+          <div class="hero-content">
+            <h2 class="hero-subtitle">KOŁO NAUKOWE UCZENIA MASZYNOWEGO</h2>
+            <h1 class="hero-title">ATLAS</h1>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container grid two">
-        <div>
-          <h2>Co robimy?</h2>
-          <p>Organizujemy spotkania, warsztaty i projekty badawczo‑rozwojowe związane z ML/AI. Wspieramy członków w konkursach i publikacjach. Mamy czynną sekcję marketingową zajmującą się organizacją wydarzeń</p>
+    <section class="intro-mobile container">
+      <p class="hero-desc">Eksplorujemy uczenie maszynowe i dane. Dołącz do nas!</p>
+      <div class="hero-actions">
+         <a class="btn btn-primary" href="aktualnosci.html">Zobacz aktualności</a>
+         <a class="btn btn-ghost" href="plan-spotkan.html">Plan spotkań</a>
+      </div>
+    </section>
+
+    <section class="main-grid-section">
+      <div class="container grid-layout">
+        
+        <div class="column-left">
+          
+          <div class="intro-desktop">
+            <p class="hero-desc">Eksplorujemy uczenie maszynowe i dane. Dołącz do nas!</p>
+            <div class="hero-actions">
+               <a class="btn btn-primary" href="aktualnosci.html">Zobacz aktualności</a>
+               <a class="btn btn-ghost" href="plan-spotkan.html">Plan spotkań</a>
+            </div>
+          </div>
+
+          <div class="text-block">
+            <h2>Co robimy?</h2>
+            <p>Organizujemy spotkania, warsztaty i projekty badawczo‑rozwojowe związane z ML/AI. Wspieramy członków w konkursach i publikacjach. Mamy czynną sekcję marketingową zajmującą się organizacją wydarzeń.</p>
+          </div>
+
         </div>
-        <div class="card">
-          <h3>Zobacz więcej</h3>
-          <ul class="list">
-            <li>Dołącz do spotkania – sprawdź <a href="plan-spotkan.html">kalendarz</a></li>
-            <li>Sprawdź <a href="aktualnosci.html">aktualności</a> koła</li>
-            <li>Skontaktuj się: <a href="kontakt.html">formularz</a></li>
-          </ul>
+
+        <div class="column-right">
+          
+          <div class="hero-card">
+            <div class="stats">
+              <div class="stat">
+                <div class="stat-num">#ML</div>
+                <div class="stat-label">Uczenie maszynowe</div>
+              </div>
+              <div class="stat">
+                <div class="stat-num">#AI</div>
+                <div class="stat-label">Sztuczna inteligencja</div>
+              </div>
+              <div class="stat">
+                <div class="stat-num">#Data</div>
+                <div class="stat-label">Analiza danych</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Zobacz więcej</h3>
+            <ul class="list">
+              <li>Dołącz do spotkania – sprawdź <a href="plan-spotkan.html">kalendarz</a></li>
+              <li>Sprawdź <a href="aktualnosci.html">aktualności</a> koła</li>
+              <li>Skontaktuj się: <a href="kontakt.html">formularz</a></li>
+            </ul>
+          </div>
+
         </div>
+
       </div>
     </section>
   </main>
@@ -93,5 +129,3 @@
   <script src="assets/js/main.js"></script>
 </body>
 </html>
-
-

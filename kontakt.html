@@ -4,6 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kontakt – ATLAS</title>
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Rakkas&family=Tac+One&display=swap" rel="stylesheet"> -->
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -11,7 +15,9 @@
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html">ATLAS</a>
+      <a class="brand" href="index.html">
+        <img src="assets/images/ATLAS_logo_białe.png" alt="Logo ATLAS">
+      </a>
       <button class="nav-toggle" aria-label="Otwórz menu" aria-expanded="false"><span></span><span></span><span></span></button>
       <nav class="site-nav">
         <ul>
@@ -54,27 +60,40 @@
           Dane wpisane w formularzu będą przetwarzane przez Koło Naukowe Uczenia Maszynowego ATLAS w celu obsługi zapytania zgodnie z Polityką Prywatności.
           </p>
         </div>
-        <div class="card">
-          <h3>Dane kontaktowe</h3>
-          <p>E-mail: <a href="mailto:knum.atlas@gmail.com">knum.atlas@gmail.com</a></p>
-          <p>Media społecznościowe: <br></p>
 
-          <div class="social-icons">
-          <a href="https://www.facebook.com/knum.atlas" target="_blank">
-            <i class="fa-brands fa-facebook fa-2xl"></i>
-          </a>
-          <a href="https://www.instagram.com/knum.atlas/?igsh=MXB3OG90ZGVzZWVwNA%3D%3D#" target="_blank">
-            <i class="fa-brands fa-instagram fa-2xl"></i>
-          </a>
-          <a href="https://www.linkedin.com/company/knumatlas/posts/?feedView=all" target="_blank">
-            <i class="fa-brands fa-linkedin fa-2xl"></i>
-          </a>
+        <div class="card contact-card-inner">
+          <div class="contact-text">
+            <h3>Dane kontaktowe</h3>
+            <p>E-mail: <a href="mailto:knum.atlas@gmail.com">knum.atlas@gmail.com</a></p>
+            <p>Media społecznościowe:</p>
+            
+            <div class="social-icons">
+              <a href="https://www.facebook.com/knum.atlas" target="_blank">
+                <i class="fa-brands fa-facebook fa-2xl"></i>
+              </a>
+              <a href="https://www.instagram.com/knum.atlas/?igsh=MXB3OG90ZGVzZWVwNA%3D%3D#" target="_blank">
+                <i class="fa-brands fa-instagram fa-2xl"></i>
+              </a>
+              <a href="https://www.linkedin.com/company/knumatlas/posts/?feedView=all" target="_blank">
+                <i class="fa-brands fa-linkedin fa-2xl"></i>
+              </a>
+            </div>
+
+            <br>
+            <p>
+              <strong>Politechnika Lubelska</strong><br>
+              ul. Nadbystrzycka 38 D<br>
+              20-618 Lublin
+            </p>
           </div>
-          <br>
-          <p> Politechnika Lubelska<br>
-          ul. Nadbystrzycka 38 D<br>
-          20-618 Lublin
-          </p>
+
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2498.1345838973302!2d22.546314976268945!3d51.23501623056579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47225777251c8cf5%3A0xbbe099539fb0ceee!2sWydzia%C5%82%20Matematyki%20i%20Informatyki%20Technicznej%20Politechniki%20Lubelskiej!5e0!3m2!1spl!2spl!4v1766341352110!5m2!1spl!2spl"
+              allowfullscreen="" 
+              loading="lazy">
+            </iframe>
+          </div>
         </div>
       </div>
     </div>
