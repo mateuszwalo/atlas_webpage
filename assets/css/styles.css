@@ -168,10 +168,10 @@ main {
   display: inline-block;
   color: var(--text);
   text-decoration: none;
-  font-family: 'Inter', sans-serif; /* Wymuszenie czcionki */
+  font-family: 'Unbounded', sans-serif; /* Wymuszenie czcionki */
   font-weight: 600;
   font-size: 15px; 
-  padding: 8px 16px;
+  padding: 8px 4px;
   border-radius: 50px;
   transition: all 0.2s ease;
 }
@@ -218,7 +218,7 @@ body:not(.home-page) .site-header .brand {
 }
 
 /* --- RESPONSYWNOŚĆ MENU (TABLET/MOBILE) --- */
-@media (max-width: 1050px) {
+@media (max-width: 1073px) {
   .nav-toggle { display: inline-flex; }
   
   .site-nav {
@@ -293,6 +293,7 @@ body:not(.home-page) .site-header .brand {
 .btn-primary { background: linear-gradient(90deg, var(--accent), #7aa8ff); color: #fff; } */
 .btn-ghost { background: transparent; border-color: rgba(255,255,255,0.14); color: var(--text); }
 
+
 .btn-primary {
   /* Gradient od starego złota do piaskowego */
   background: linear-gradient(135deg, var(--accent-gold), var(--accent-sand));
@@ -303,9 +304,32 @@ body:not(.home-page) .site-header .brand {
 .btn-primary:hover {
   box-shadow: 0 8px 30px rgba(212, 175, 55, 0.6), 0 0 20px rgba(236, 72, 153, 0.3); /* Złoto-różowa poświata */
   transform: translateY(-2px);
-  
-  /* WYMUSZAMY CIEMNY KOLOR TEKSTU (żeby nie znikał na złotym tle) */
   color: #050814;
+}
+
+/* --- PRZYCISK ODŚWIEŻANIA ŻARTÓW (STYL GHOST) --- */
+
+#refresh-jokes {
+  background: transparent;
+  border: 1px solid rgba(212, 175, 55, 0.6); 
+  color: var(--text);
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#refresh-jokes:hover {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);     
+  background: rgba(212, 175, 55, 0.05); 
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.6); 
+  transform: translateY(-2px);
+}
+#refresh-jokes:active {
+  transform: translateY(0);
+  box-shadow: none;
 }
 
 
@@ -869,11 +893,12 @@ button[type="submit"] { margin-top: 10px; }
   font-weight: 400; letter-spacing: 1px;
   color: var(--text); text-transform: uppercase; margin: 0 0 2px 0;
   white-space: normal; line-height: 1.2;
+  margin-bottom: 0px
 }
 .hero-title {
   font-size: clamp(40px, 15vw, 200px); 
   line-height: 1; 
-  margin: -20px 0 0 0; 
+  margin: 0 0 0 0; 
   font-weight: 900;
   background: linear-gradient(135deg, #ffffff 10%, var(--accent-gold) 50%, var(--accent-sand) 100%);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
