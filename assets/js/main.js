@@ -1,10 +1,9 @@
-// Year in footer
+// Rok w footer
 (function setYear() {
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 })();
 
-// Mobile nav (NAPRAWIONE)
 (function mobileNav() {
   var header = document.querySelector('.site-header');
   var btn = document.querySelector('.nav-toggle');
@@ -26,7 +25,7 @@
   });
 })();
 
-// Active nav link
+// link active nav
 (function activeLink() {
   var path = (location.pathname || '').split('/').pop() || 'index.html';
   var links = document.querySelectorAll('.site-nav a');
@@ -36,7 +35,7 @@
   });
 })();
 
-// Calendar rendering on Plan spotkań
+// Kalendarz w Planie spotkań
 (function calendar() {
   var root = document.getElementById('calendar');
   if (!root) return;
@@ -55,7 +54,7 @@
 
   (function seedBiweeklySaturdays() {
     var start = new Date(year, month, 1);
-    // znajdź pierwszą sobotę (getDay() === 6)
+    // znajdujemy pierwszą sobotę (getDay() === 6)
     while (start.getDay() !== 6) {
       start.setDate(start.getDate() + 1);
     }
@@ -64,7 +63,6 @@
     var d = new Date(start.getTime());
     while (d <= end) {
       var iso = d.toISOString().slice(0, 10);
-      // jeśli nie nadpisywać istniejących wpisów (np. ręcznie dodanych), zostaw je
       if (!eventsByDate[iso]) {
         eventsByDate[iso] = {
           title: 'Spotkanie koła',
@@ -76,23 +74,6 @@
       d.setDate(d.getDate() + 14);
     }
   })();
-  // Add sample placeholders for the first three Wednesdays of current month
-  // (function seedPlaceholders() {
-  //   var d = new Date(year, month, 1);
-  //   var weds = 0;
-  //   while (d.getMonth() === month && weds < 3) {
-  //     if (d.getDay() === 3) { // Wednesday
-  //       var iso = d.toISOString().slice(0, 10);
-  //       eventsByDate[iso] = {
-  //         title: 'Spotkanie koła',
-  //         time: '10:00',
-  //         desc: 'Plan: omówienie działań koła i tematów projektów'
-  //       };
-  //       weds++;
-  //     }
-  //     d.setDate(d.getDate() + 1);
-  //   }
-  // })();
 
   var monthNames = ['Styczeń','Luty','Marzec','Kwiecień','Maj','Czerwiec','Lipiec','Sierpień','Wrzesień','Październik','Listopad','Grudzień'];
   var dayNames = ['Pn','Wt','Śr','Cz','Pt','So','Nd']; // Monday-first
@@ -111,7 +92,6 @@
     var grid = document.createElement('div');
     grid.className = 'cal-grid';
 
-    // Day name headers
     dayNames.forEach(function (dn) {
       var h = document.createElement('div');
       h.className = 'cal-head';
@@ -120,19 +100,16 @@
     });
 
     var first = new Date(targetYear, targetMonth, 1);
-    var firstDay = first.getDay(); // 0 Sun ... 6 Sat
-    // Convert to Monday-first index: 0..6
+    var firstDay = first.getDay(); // 0 Nie ... 6 Sob
     var pad = (firstDay + 6) % 7;
     var daysInMonth = new Date(targetYear, targetMonth + 1, 0).getDate();
 
-    // Empty cells before 1st
     for (var i = 0; i < pad; i++) {
       var empty = document.createElement('div');
       empty.className = 'cal-cell';
       grid.appendChild(empty);
     }
 
-    // Day cells
     for (var day = 1; day <= daysInMonth; day++) {
       var cell = document.createElement('div');
       cell.className = 'cal-cell';
@@ -185,7 +162,7 @@
   buildCalendar(year, month);
 })();
 
-// Jokes on Aktualności
+// Żarty w Aktualnościach
 (function jokesSection() {
   var list = document.getElementById('jokes');
   if (!list) return;
@@ -231,18 +208,16 @@
   fetchJokes();
 })();
 
-// Page transition navigation
 (function pageTransitions() {
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduce) return;
   var body = document.body;
-  // Enter animation
+
   body.classList.add('page-init');
   requestAnimationFrame(function () {
     body.classList.add('page-enter');
     body.classList.remove('page-init');
   });
-  // Intercept internal links
   function isInternal(href) {
     if (!href) return false;
     if (href[0] === '#') return false;
@@ -266,7 +241,6 @@
   });
 })();
 
-// Scroll reveal
 (function scrollReveal() {
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduce) return;
@@ -284,7 +258,6 @@
   els.forEach(function (el) { io.observe(el); });
 })();
 
-// Buttons ripple
 (function buttonRipple() {
   document.addEventListener('click', function (e) {
     var btn = e.target && e.target.closest ? e.target.closest('.btn') : null;
@@ -303,7 +276,6 @@
   });
 })();
 
-// Header scroll state
 (function headerScroll() {
   var header = document.querySelector('.site-header');
   if (!header) return;
@@ -315,12 +287,10 @@
   window.addEventListener('scroll', onScroll, { passive: true });
 })();
 
-// Enhance jokes loading with skeleton
 (function jokesSkeleton() {
   var list = document.getElementById('jokes');
   if (!list) return;
   var origFetch = window.fetch;
-  // Wrap existing jokes fetch by listening to button and initial call
   function showSkeleton() {
     list.innerHTML = '';
     var card = document.createElement('article');
@@ -332,14 +302,10 @@
   }
   var btn = document.getElementById('refresh-jokes');
   if (btn) btn.addEventListener('click', showSkeleton);
-  // Also show skeleton on initial load (slightly defer if list is empty)
   if (!list.children.length) showSkeleton();
 })();
 
-// Calendar popover smooth show
 (function enhanceCalendarPopover() {
-  // The calendar code adds .event-popover; we toggle .show shortly after append
-  // Monkey-patch appendChild on calendar container to auto-add 'show'
   var calendar = document.getElementById('calendar');
   if (!calendar) return;
   var observer = new MutationObserver(function (mutations) {
