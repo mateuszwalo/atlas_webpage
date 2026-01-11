@@ -45,15 +45,7 @@
   var year = today.getFullYear();
   var month = today.getMonth(); // 0-11
 
-  // Placeholder events (edit manually later)
   var eventsByDate = {
-    // ISO YYYY-MM-DD : { title, time, desc }
-    // Example placeholders; replace with actual meetings
-    // Current month examples:
-  };
-
-  var eventsByDate = {
-    // Możesz dodać tu inne konkretne daty ręcznie jeśli trzeba
     '2025-12-02': {
       title: 'Spotkanie wieczorne',
       time: '19:30',
